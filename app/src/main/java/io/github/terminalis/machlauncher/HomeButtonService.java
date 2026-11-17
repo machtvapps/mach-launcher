@@ -2,7 +2,9 @@ package io.github.terminalis.machlauncher;
 
 import android.accessibilityservice.AccessibilityService;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ResolveInfo;
+import android.provider.Settings;
 import android.view.accessibility.AccessibilityEvent;
 
 public class HomeButtonService extends AccessibilityService {
@@ -23,7 +25,9 @@ public class HomeButtonService extends AccessibilityService {
         ResolveInfo home = getPackageManager().resolveActivity(
                 new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME), 0);
         systemHome = home == null ? null : home.activityInfo.packageName;
-        openMach();
+        if (isFirstConnectionSinceBoot()) {
+            openMach();
+        }
     }
 
     @Override
@@ -43,6 +47,16 @@ public class HomeButtonService extends AccessibilityService {
             running = null;
         }
         return super.onUnbind(intent);
+    }
+
+    private boolean isFirstConnectionSinceBoot() {
+        int bootCount = Settings.Global.getInt(getContentResolver(), Settings.Global.BOOT_COUNT, 0);
+        SharedPreferences preferences = getSharedPreferences("home_button_service", MODE_PRIVATE);
+        if (preferences.getInt("opened_at_boot_count", -1) == bootCount) {
+            return false;
+        }
+        preferences.edit().putInt("opened_at_boot_count", bootCount).apply();
+        return true;
     }
 
     private boolean isSystemHome(CharSequence packageName) {
