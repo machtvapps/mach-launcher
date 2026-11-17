@@ -21,6 +21,7 @@ A launcher for Android TV: a dock of favourite apps, a grid of every TV app, and
 - **Apps grid:** every app with a TV entry, six across, A to Z until you move a tile. Phone-only apps are left out.
 - **Recommendations:** titles from Android's Play Next list and from apps that publish TV channel rows. They show as a row of cards, or as a full-screen hero with the title's artwork behind Home. Each source has its own switch, and every source starts off.
 - **Backgrounds:** a dark or light gradient; a bundled cloud photo by night, by day, or switching with the time of day; or a photo from the TV. The cloud photos are bundled for 1080p and 4K screens.
+- **Screensaver:** the cloud photos, dimmed, with the time in glass digits that cross the sky like the sun by day and the moon by night, and the date beneath. Choose Mach Launcher in the TV's screensaver settings.
 - **Status bar:** the date and clock on the left; the TV's inputs menu, Android's Settings and Mach's settings on the right.
 - **App panel:** hold OK on a tile to move it, open it, add it to or remove it from the dock, hide it, open its app info or uninstall it.
 - **Updates:** About → Check for updates shows the latest release's changes, downloads it and opens Android's installer.

@@ -77,6 +77,18 @@
                 android:resource="@xml/home_button_service" />
         </service>
 
+        <service
+            android:name=".CloudScreensaver"
+            android:exported="true"
+            android:label="Mach Launcher"
+            android:permission="android.permission.BIND_DREAM_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.dreams.DreamService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
