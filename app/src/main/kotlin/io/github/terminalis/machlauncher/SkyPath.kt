@@ -15,3 +15,9 @@ fun skyPosition(minutes: Int, lightFrom: Int, darkFrom: Int): SkyPosition {
     val across = ((minutes - start + DAY_MINUTES) % DAY_MINUTES) / length.toFloat()
     return SkyPosition(across, sin(PI * across).toFloat())
 }
+
+fun showsDayClouds(choice: BackgroundChoice, minutes: Int, lightFrom: Int, darkFrom: Int): Boolean = when (choice) {
+    BackgroundChoice.light, BackgroundChoice.cloudsDay -> true
+    BackgroundChoice.dark, BackgroundChoice.cloudsNight -> false
+    BackgroundChoice.cloudsAuto, BackgroundChoice.picture -> isLightAt(minutes, lightFrom, darkFrom)
+}
