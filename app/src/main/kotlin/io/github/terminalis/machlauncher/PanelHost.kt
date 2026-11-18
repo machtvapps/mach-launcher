@@ -574,7 +574,7 @@ class PanelHost(
         }, LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply { topMargin = px(18.5f) })
         top.addView(names, LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).apply { leftMargin = px(24f) })
         content.addView(top)
-        content.addView(body(AppStrings.textAboutDialog("https://github.com/terminalis/mach-launcher")), LinearLayout.LayoutParams(
+        content.addView(body(AppStrings.textAboutDialog("https://github.com/machtvapps/mach-launcher")), LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT,
         ).apply { topMargin = px(25f) })
         val check = DialogPill(context, d, Glyphs.DOWNLOAD, AppStrings.updateCheck, fonts) {

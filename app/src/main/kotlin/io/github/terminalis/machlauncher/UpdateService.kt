@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 import org.json.JSONObject
 
 const val APK_ASSET_NAME = "mach-launcher-universal-release.apk"
-private const val LATEST_RELEASE_URL = "https://api.github.com/repos/terminalis/mach-launcher/releases/latest"
+private const val LATEST_RELEASE_URL = "https://api.github.com/repos/machtvapps/mach-launcher/releases/latest"
 
 data class Release(val version: String, val notes: String, val apkUrl: String)
 
