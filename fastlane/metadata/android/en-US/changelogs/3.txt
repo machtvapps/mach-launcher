@@ -1,0 +1,7 @@
+New: Mach Clouds, a screensaver. It shows the cloud photos, dimmed, with the time in a glass tile that crosses the sky. Choose it in the TV's screensaver settings.
+
+Fixed: with the Home button switch on, Mach came to the front each time the switch's service reconnected. It now opens once after the TV starts.
+
+New banner in the TV's app list.
+
+The F-Droid repository for Mach Launcher has moved. Its new address is at machtvapps.github.io.
