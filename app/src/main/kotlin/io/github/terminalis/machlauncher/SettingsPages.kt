@@ -35,6 +35,7 @@ class SettingsPages(
                 PanelRow(AppStrings.applications, RowLeading.Glyph(Glyphs.GRID), RowTrailing.Chevron, focusFirst = true) { navigator.push(applications()) },
                 PanelRow(AppStrings.recommendations, RowLeading.Glyph(Glyphs.FILM), RowTrailing.Chevron) { navigator.push(recommendations()) },
                 PanelRow(AppStrings.background, RowLeading.Glyph(Glyphs.PHOTOS), RowTrailing.Chevron) { navigator.push(background()) },
+                PanelRow(AppStrings.screensaver, RowLeading.Glyph(Glyphs.MOON_STARS)) { apps.openScreensaverSettings() },
                 PanelRow(AppStrings.homeScreen, RowLeading.Glyph(Glyphs.HOUSE), RowTrailing.Chevron) { navigator.push(homeScreen()) },
                 PanelRow(AppStrings.aboutLauncher, RowLeading.Glyph(Glyphs.INFO), dividerBefore = true) { navigator.showAbout() },
             )

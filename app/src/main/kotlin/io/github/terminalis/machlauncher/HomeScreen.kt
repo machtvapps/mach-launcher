@@ -126,7 +126,7 @@ class HomeScreen(private val activity: MainActivity) : FrameLayout(activity) {
     }
     private val statusBar = StatusBarView(activity, d, screenWidth, screenHeight, regular, bold, icons)
     private val loading = loadingView()
-    private val plusGlyph = bakeGlyph(PLUS_GLYPH, 32 * d * 1.15f, icons, Color.WHITE, HOME_TEXT_SHADOWS.first(), d)
+    private val plusGlyph = bakeGlyph(PLUS_GLYPH, 32 * d * TILE_ZOOM, icons, Color.WHITE, HOME_TEXT_SHADOWS.first(), d)
 
     private var dockApps: List<App> = emptyList()
     private var gridApps: List<App> = emptyList()

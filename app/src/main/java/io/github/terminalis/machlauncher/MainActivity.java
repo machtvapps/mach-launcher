@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends Activity {
+    static boolean inFront;
     static final String PERMISSION_READ_TV_LISTINGS = "android.permission.READ_TV_LISTINGS";
 
     InstalledApps installedApps;
@@ -65,8 +66,15 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    protected void onPause() {
+        inFront = false;
+        super.onPause();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+        inFront = true;
         if (resumed) {
             home.onBackToFront();
         }
@@ -94,6 +102,11 @@ public class MainActivity extends Activity {
 
     boolean openSettings() {
         return tryStartActivity(new Intent(Settings.ACTION_SETTINGS));
+    }
+
+    boolean openScreensaverSettings() {
+        return tryStartActivity(new Intent(Settings.ACTION_DREAM_SETTINGS))
+                || tryStartActivity(new Intent().setClassName("com.android.tv.settings", "com.android.tv.settings.device.display.daydream.DaydreamActivity"));
     }
 
     boolean openHomeSettings() {

@@ -79,9 +79,16 @@ class SettingsPagesTest {
         val page = pages().first()
 
         assertEquals("Interface", page.title())
-        assertEquals(listOf("Applications", "Recommendations", "Background", "Home screen", "About Mach Launcher"), labels(page))
+        assertEquals(listOf("Applications", "Recommendations", "Background", "Screensaver", "Home screen", "About Mach Launcher"), labels(page))
         assertTrue(page.rows().last().dividerBefore)
         assertEquals(RowTrailing.None, page.rows().last().trailing)
+    }
+
+    @Test
+    fun `Screensaver opens the TV's screensaver settings`() = runTest {
+        pages().first().row("Screensaver").onPress()
+
+        assertTrue("openScreensaverSettings" in channel.calls)
     }
 
     @Test
