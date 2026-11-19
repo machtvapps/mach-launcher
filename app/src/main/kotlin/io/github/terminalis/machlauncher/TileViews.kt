@@ -39,7 +39,7 @@ import kotlin.math.ceil
 import kotlin.math.roundToInt
 
 private const val TILE_RADIUS = 12f
-private const val TILE_ZOOM = 1.15f
+const val TILE_ZOOM = 1.25f
 private const val TILE_PRESSED = 0.9f
 private const val TILE_SURFACE = 0xFF121212.toInt()
 

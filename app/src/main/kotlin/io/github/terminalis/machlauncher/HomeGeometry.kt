@@ -13,7 +13,7 @@ private const val DOCK_BOTTOM_PADDING = 16f
 private const val DOCK_INNER_PADDING = 5f
 private const val GRID_ROW_SPACING = 12f
 private const val GRID_BOTTOM_PADDING = 8f
-private const val LABEL_GAP = 8f
+private const val LABEL_GAP = 3f
 private const val KEEP_TOP_MARGIN = 24f
 private const val KEEP_BOTTOM_MARGIN = 96f
 private const val KEEP_MIN_MOVE = 24f
@@ -45,7 +45,7 @@ class HomeGeometry(val width: Float, val height: Float) {
 
     fun gridTileTop(index: Int) = gridTop + APP_CARD_VERTICAL_PADDING + rowPitch * (index / HOME_COLUMNS)
 
-    fun gridLabelTop(index: Int) = gridTileTop(index) + tileHeight + LABEL_GAP
+    fun gridLabelTop(index: Int) = gridTileTop(index) + tileHeight * (1 + TILE_ZOOM) / 2 + LABEL_GAP
 
     fun gridRows(tiles: Int) = (tiles + HOME_COLUMNS - 1) / HOME_COLUMNS
 

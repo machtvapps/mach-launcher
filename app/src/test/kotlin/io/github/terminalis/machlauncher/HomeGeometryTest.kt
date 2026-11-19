@@ -26,7 +26,7 @@ class HomeGeometryTest {
         assertEquals(520.5f, home.gridTileTop(5), 0.001f)
         assertEquals(642f, home.gridTileTop(6), 0.001f)
         assertEquals(763.5f, home.gridTileTop(12), 0.001f)
-        assertEquals(596f, home.gridLabelTop(0), 0.001f)
+        assertEquals(599.4375f, home.gridLabelTop(0), 0.001f)
     }
 
     @Test
