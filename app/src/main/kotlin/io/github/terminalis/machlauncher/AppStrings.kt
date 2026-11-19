@@ -23,6 +23,7 @@ object AppStrings {
     const val appInfo = "Application info"
     const val background = "Background"
     const val homeScreen = "Home screen"
+    const val screensaver = "Screensaver"
     const val homeScreenIntro = "Mach takes over the Home button and the screen the TV starts on through an accessibility switch."
     const val homeScreenAutoStartStep = "1. Some TVs have an app that decides which apps may start by themselves. If yours does, allow Mach Launcher there."
     const val homeScreenAccessibilityStep = "2. Open Settings → Device Preferences → Accessibility, choose Mach Launcher and turn it on."

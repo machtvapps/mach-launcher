@@ -27,6 +27,7 @@ interface AndroidChannel {
     fun launchApp(packageName: String)
     fun openSettings()
     fun openHomeSettings()
+    fun openScreensaverSettings()
     fun resetHomeScreen(): Boolean
     fun openAppInfo(packageName: String)
     fun uninstallApp(packageName: String)

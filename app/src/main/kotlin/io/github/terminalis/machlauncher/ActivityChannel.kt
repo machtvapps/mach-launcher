@@ -22,6 +22,10 @@ class ActivityChannel(private val activity: MainActivity) : AndroidChannel {
         activity.openSettings()
     }
 
+    override fun openScreensaverSettings() {
+        activity.openScreensaverSettings()
+    }
+
     override fun openHomeSettings() {
         activity.openHomeSettings()
     }

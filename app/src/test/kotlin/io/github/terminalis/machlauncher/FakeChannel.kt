@@ -48,6 +48,10 @@ class FakeChannel : AndroidChannel {
         calls.add("openSettings")
     }
 
+    override fun openScreensaverSettings() {
+        calls.add("openScreensaverSettings")
+    }
+
     override fun openHomeSettings() {
         calls.add("openHomeSettings")
     }

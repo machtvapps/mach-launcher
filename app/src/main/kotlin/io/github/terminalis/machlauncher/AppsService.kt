@@ -112,6 +112,8 @@ class AppsService(
 
     fun openSettings() = channel.openSettings()
 
+    fun openScreensaverSettings() = channel.openScreensaverSettings()
+
     fun openHomeSettings() = channel.openHomeSettings()
 
     fun resetHomeScreen(): Boolean = channel.resetHomeScreen()

@@ -104,6 +104,11 @@ public class MainActivity extends Activity {
         return tryStartActivity(new Intent(Settings.ACTION_SETTINGS));
     }
 
+    boolean openScreensaverSettings() {
+        return tryStartActivity(new Intent(Settings.ACTION_DREAM_SETTINGS))
+                || tryStartActivity(new Intent().setClassName("com.android.tv.settings", "com.android.tv.settings.device.display.daydream.DaydreamActivity"));
+    }
+
     boolean openHomeSettings() {
         return tryStartActivity(new Intent(Settings.ACTION_HOME_SETTINGS));
     }
