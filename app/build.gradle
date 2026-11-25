@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace "io.github.terminalis.machlauncher"
+    namespace "io.github.machtvapps.machlauncher"
     compileSdk 36
 
     defaultConfig {
-        applicationId "io.github.terminalis.machlauncher"
+        applicationId "io.github.machtvapps.machlauncher"
         minSdk 24
         targetSdk 35
-        versionCode 3
-        versionName "1.1.0"
+        versionCode 4
+        versionName "1.2.0"
     }
 
     signingConfigs {
