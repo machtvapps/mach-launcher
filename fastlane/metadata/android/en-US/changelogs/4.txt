@@ -1,0 +1,8 @@
+Mach Launcher's new app ID, io.github.machtvapps.machlauncher, makes it a new app; the old one gets no more updates.
+
+Settings don't carry over: redo Settings → Home screen, the screensaver, dock, app order, Hidden Apps, Background and Recommendations, then uninstall the old app.
+
+F-Droid and Obtainium: the Mach TV apps repository, https://machtvapps.github.io/fdroid/repo.
+
+Fixed: a second Home press could reopen the TV's launcher.
+New: a Screensaver row in Settings; cards zoom 25% on focus.

@@ -62,7 +62,7 @@ Requires JDK 21 and the Android SDK.
 
     ./gradlew assembleDebug
 
-The debug build installs beside a release as `io.github.terminalis.machlauncher.debug`.
+The debug build installs beside a release as `io.github.machtvapps.machlauncher.debug`.
 
 ## Credits
 
